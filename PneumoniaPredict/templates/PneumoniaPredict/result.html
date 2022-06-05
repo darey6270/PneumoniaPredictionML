@@ -1,0 +1,83 @@
+{%extends 'base.html' %}
+{%load static %}
+
+{%block content1 %}
+<script>
+    function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result)
+                        .width(400)
+                        .height(400);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+</script>
+<style>
+	#head { background:#181015 url({% static 'assets/images/Doctor_And_Patient+.jpg' %}) no-repeat; background-size: cover;
+	 min-height:520px; text-align: center;
+	  padding-top:240px; color:white;
+	  font-family:"Open sans", Helvetica, Arial; font-weight:300; }
+</style>
+	<!-- Header -->
+	<header id="head">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+
+</div>
+
+				<div class="col-sm-4">
+        <h1 class="lead"> Smart Pneumonia Disease Prediction</h1>
+				<p class="tagline"> Data Mining approach to bring efficiency in the Pneumonia test operations in the medical center </p>
+		<ol class="breadcrumb text-center">
+			<li><a href="{% url 'index' %}">Home</a></li>
+			<li class="active">Prediction result</li>
+		</ol>
+                    <h4>Pneumonia Prediction Result</h4>
+</div>
+
+				<div class="col-sm-4">
+
+
+</div>
+				</div>
+		</div>
+	</header>
+
+<br />
+
+
+<!-- Contact Start -->
+        <div class="contact">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>Pneumonia Disease Prediction</p>
+                    <h4>The uploaded  X-Ray result for the Person  is below</h4>
+                </div>
+                <div class="row align-items-center text-center contact-information">
+                     <div class="col-md-3 col-lg-3 text-center">
+                     </div>
+                    <div class="col-md-6 col-lg-6 text-center">
+                        {% if output == 1 %}
+                <div class="card card-body alert alert-danger text-center">This X-Ray is predicted to have Pneumonia, Please Consult Doctor..</div>
+            {% else %}
+               <center> <div class="card card-body alert alert-success text-center">This X-Ray does not have Pneumonia..</div> </center>
+            {% endif %}
+                    </div><br />
+                      <a href="{% url 'service' %}" >Back to Prediction Page</a>
+                    <div class="col-md-3 col-lg-3 text-center">
+                     </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+
+{%endblock %}

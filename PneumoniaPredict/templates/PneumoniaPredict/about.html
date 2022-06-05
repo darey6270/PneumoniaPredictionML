@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block content1 %}
+<style>
+	#head { background:#181015 url({% static 'assets/images/group_doctor3.jpg' %}) no-repeat; background-size: cover;
+	 min-height:520px; text-align: center;
+	  padding-top:240px; color:white;
+	  font-family:"Open sans", Helvetica, Arial; font-weight:300; }
+</style>
+	<!-- Header -->
+	<header id="head">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+
+</div>
+
+				<div class="col-sm-4">
+        <h1 class="lead"> Smart Pneumonia Disease Prediction</h1>
+				<p class="tagline"> Data Mining approach to bring efficiency in the Pneumonia test operations in the medical center </p>
+		<ol class="breadcrumb text-center">
+			<li><a href="{% url 'index' %}">Home</a></li>
+			<li class="active">About</li>
+		</ol>
+</div>
+
+				<div class="col-sm-4">
+
+
+</div>
+				</div>
+		</div>
+	</header>
+
+<br />
+<div class="jumbotron top-space">
+			<h4>As per the existing system, patients have to visit a diagnostic center,
+				consult their doctor and wait for more than two days to get their result.
+				Moreover, every time they want to get their diagnosis report, they have to waste their money.
+				But with the rise of Data mining approach, the need for Pneumonia prediction system is highly recommended</h4>
+     		<p class="text-right"><a class="btn btn-primary btn-large"  href="{% url 'index' %}">Learn more »</a></p>
+  		</div>
+		<div class="row">
+			
+	<!-- Highlights - jumbotron -->
+	<div class="jumbotron top-space">
+		<div class="container">
+
+			
+
+			<div class="row">
+				<div class="col-md-6 col-sm-6 highlight">
+					<div class="h-body text-center">
+						<img src="{% static 'assets/images/group_doctor1.jpg' %}">
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6 highlight">
+					<h3 class="text-center thin"> About Pneumonia Disease</h3>
+					<div class="h-body text-center">
+						<p>. Pneumonia is most commonly caused by viruses
+							or bacteria and, less commonly, other microorganisms .
+							Nowadays, chest X-ray (CXR) imaging is used commonly for
+							health intensive care and analysis of many lung diseases
+							such as pneumonia, cancer because of relatively low prices.
+							Therefore, Chest X-rays are currently the best available tool.
+                             Data mining is a process that is used to locate correlations
+							between data and form pattern of relationships among cluster
+							fields in the enormous interactive database (Gary Smith, 2020).
+							With data mining techniques, doctors around the world will be able
+							to predict illnesses effectively and be better equipped to manage
+							potential high-risk candidates. Such analysis and predictions become
+							critical if the objective is to provide relief to millions around the world.
+</p>
+					</div>
+				</div>
+			</div> <!-- /row  -->
+
+		</div>
+	</div>
+		</div>
+{%endblock %}

@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content1 %}
+<style>
+	#head { background:#181015 url({% static 'assets/images/Doctor_Patient.jpg' %}) no-repeat; background-size: cover;
+	 min-height:520px; text-align: center;
+	  padding-top:240px; color:white;
+	  font-family:"Open sans", Helvetica, Arial; font-weight:300; }
+</style>
+	<!-- Header -->
+	<header id="head">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+				<h1 class="lead"> Smart Pneumonia Disease Prediction</h1>
+				<p class="tagline"> Data Mining approach to bring efficiency in the Pneumonia test operations in the medical center </p>
+	<p><a class="btn btn-default btn-lg" role="button" href="{% url 'about' %}">MORE INFO</a> <a class="btn btn-action btn-lg" href="{% url 'service' %}" role="button">PREDICT NOW</a></p>
+				</div>
+				</div>
+		</div>
+	</header>
+	<!-- /Header -->
+
+	<!-- Intro -->
+	<div class="container text-center">
+		<br> <br>
+		<h2 class="thin">Smart Pneumonia Disease Prediction</h2>
+		<p class="text-muted">
+			Data Mining approach to bring efficiency in the Pneumonia test operations in the medical center
+		</p>
+	</div>
+	<!-- /Intro-->
+		
+	<!-- Highlights - jumbotron -->
+	<div class="jumbotron top-space">
+		<div class="container">
+			
+			<h3 class="text-center thin"> Pneumonia Disease</h3>
+			
+			<div class="row">
+				<div class="col-md-6 col-sm-6 highlight">
+					<div class="h-body text-center">
+						<p>Pneumonia is one of the serious diseases which cause most
+							of the deaths in adults globally. According to Health Metrics
+							and Evaluation (IHME), the highest pneumonia mortality rates
+							in 2017 were among people aged 70 and older. More than 1.13
+							million pneumonia-related deaths are reported every year were
+							in this age group . Pneumonia is a disease of infectious origin
+							that causes inflammation in the air sacs or alveoli of one or both lungs.
+							The air sacs get filled with fluid which can cause difficulty in
+							breathing and an over-generation of mucus and sputum </p>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6 highlight">
+					<div class="h-body text-center">
+						<p>. Pneumonia is most commonly caused by viruses
+							or bacteria and, less commonly, other microorganisms .
+							Nowadays, chest X-ray (CXR) imaging is used commonly for
+							health intensive care and analysis of many lung diseases
+							such as pneumonia, cancer because of relatively low prices.
+							Therefore, Chest X-rays are currently the best available tool.
+                             Data mining is a process that is used to locate correlations
+							between data and form pattern of relationships among cluster
+							fields in the enormous interactive database (Gary Smith, 2020).
+							With data mining techniques, doctors around the world will be able
+							to predict illnesses effectively and be better equipped to manage
+							potential high-risk candidates. Such analysis and predictions become
+							critical if the objective is to provide relief to millions around the world.
+</p>
+					</div>
+				</div>
+			</div> <!-- /row  -->
+		
+		</div>
+	</div>
+	<!-- /social links -->
+{%endblock %}
